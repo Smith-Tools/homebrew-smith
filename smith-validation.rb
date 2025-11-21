@@ -10,6 +10,12 @@ class SmithValidation < Formula
   depends_on :macos
   depends_on "swift"
 
+  bottle do
+    root_url "https://github.com/Smith-Tools/homebrew-smith/releases/download/smith-validation-1.0.9"
+    rebuild 1
+    sha256 cellar: :any, arm64_tahoe: "84b6d21aee297c28c8317d40352ec5f2e05a6d584a7c01c123353913e9ff4313"
+  end
+
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release", "--product", "smith-validation"
     bin.install ".build/release/smith-validation"
