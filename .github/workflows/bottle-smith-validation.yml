@@ -8,7 +8,11 @@ on:
 
 jobs:
   build:
-    runs-on: macos-14
+    name: Build bottle (${{ matrix.os }})
+    strategy:
+      matrix:
+        os: [macos-14, macos-13]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout tap
         uses: actions/checkout@v4
@@ -25,5 +29,5 @@ jobs:
       - name: Upload bottles artifact
         uses: actions/upload-artifact@v4
         with:
-          name: bottles
+          name: bottles-${{ matrix.os }}
           path: '**/*.tar.gz'
