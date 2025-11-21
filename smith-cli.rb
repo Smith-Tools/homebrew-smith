@@ -14,7 +14,7 @@ class SmithCli < Formula
   def install
     # Build smith-cli
     system "swift", "build", "--disable-sandbox", "-c", "release"
-    bin.install ".build/release/SmithCLI" => "smith-cli"
+    bin.install ".build/release/smith-cli" => "smith-cli"
   end
 
   test do
