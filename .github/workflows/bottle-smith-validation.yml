@@ -1,0 +1,29 @@
+name: Bottle smith-validation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - smith-validation.rb
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - name: Checkout tap
+        uses: actions/checkout@v4
+
+      - name: Set up Homebrew
+        run: |
+          echo "HOMEBREW_NO_INSTALL_FROM_API=1" >> $GITHUB_ENV
+
+      - name: Test-bot smith-validation
+        run: |
+          brew update
+          brew test-bot --only-formulae --tap=. smith-validation
+
+      - name: Upload bottles artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bottles
+          path: '**/*.tar.gz'
