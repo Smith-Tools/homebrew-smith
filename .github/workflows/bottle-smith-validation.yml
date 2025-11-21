@@ -20,7 +20,7 @@ jobs:
       - name: Test-bot smith-validation
         run: |
           brew update
-          brew test-bot --only-formulae --tap=. smith-validation
+          brew test-bot --only-formulae --tap=smith-tools/smith smith-validation
 
       - name: Upload bottles artifact
         uses: actions/upload-artifact@v4
