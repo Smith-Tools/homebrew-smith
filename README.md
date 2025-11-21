@@ -43,6 +43,7 @@ brew install smith-core smith-cli smith-spmsift smith-sbsift smith-xcsift
 | **smith-spmsift** | Swift Package Manager analysis | [smith-spmsift](https://github.com/Smith-Tools/smith-spmsift) |
 | **smith-sbsift** | Swift build analysis | [smith-sbsift](https://github.com/Smith-Tools/smith-sbsift) |
 | **smith-xcsift** | Xcode build analysis | [smith-xcsift](https://github.com/Smith-Tools/smith-xcsift) |
+| **smith-validation** | TCA architectural validation (Rules 1.1-1.5) | [smith-validation](https://github.com/Smith-Tools/smith-validation) |
 
 ## 💡 **Usage Examples**
 
