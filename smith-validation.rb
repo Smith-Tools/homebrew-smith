@@ -1,8 +1,8 @@
 class SmithValidation < Formula
   desc "TCA architectural validation engine (Rules 1.1-1.5) for Smith Tools"
   homepage "https://github.com/Smith-Tools/smith-validation"
-  url "https://github.com/Smith-Tools/smith-validation/archive/refs/tags/v1.0.6.tar.gz"
-  sha256 "74dc2b3ba943ee5fb3229e3f26c5101c895c5321b474212bf06a39626654f758"
+  url "https://github.com/Smith-Tools/smith-validation/archive/refs/tags/v1.0.7.tar.gz"
+  sha256 "285a6c5190a5ab05aa4af41cb3dfdfdf8a9368e5a58767a82db367edd2dfdf979f"
   license "MIT"
   head "https://github.com/Smith-Tools/smith-validation.git", branch: "main"
 
