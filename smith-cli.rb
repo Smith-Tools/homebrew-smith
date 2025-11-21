@@ -3,8 +3,8 @@
 class SmithCli < Formula
   desc "Unified CLI interface for Smith Tools ecosystem - Single entry point for all Smith utilities"
   homepage "https://github.com/Smith-Tools/smith-cli"
-  url "https://github.com/Smith-Tools/smith-cli/archive/refs/tags/v1.0.2.tar.gz"
-  sha256 "2c58118ac523e91f1a27ef963f0c1e8e46914f22af9251166e1f961ae39aa082"
+  url "https://github.com/Smith-Tools/smith-cli/archive/refs/tags/v1.0.4.tar.gz"
+  sha256 "9b3e2b91c45a432517bff81bdb15c5788c3893795ed4937baeaa06959b7b537f"
   license "MIT"
 
   depends_on :macos
