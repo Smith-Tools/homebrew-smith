@@ -6,12 +6,6 @@ class SmithValidation < Formula
   license "MIT"
   head "https://github.com/Smith-Tools/smith-validation.git", branch: "main"
 
-  bottle do
-    root_url "https://github.com/Smith-Tools/homebrew-smith/releases/download/smith-validation-1.0.9"
-    rebuild 0
-    sha256 cellar: :any, arm64_tahoe: ""
-  end
-
   depends_on xcode: ["15.0", :build]
   depends_on :macos
   depends_on "swift"
