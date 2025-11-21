@@ -8,8 +8,8 @@ class SmithValidation < Formula
 
   bottle do
     root_url "https://github.com/Smith-Tools/homebrew-smith/releases/download/smith-validation-1.0.8"
-    rebuild 0
-    sha256 cellar: :any, arm64_tahoe: "22ea27fa3333b4211877db8746c5fddb8e79af91613602c7506dfe372f55097b"
+    rebuild 1
+    sha256 cellar: :any, arm64_tahoe: "da33a92b93b7e859927aac983a1e0d5bf37c67e6351a1d5149a798a6ba8569e7"
   end
 
   depends_on xcode: ["15.0", :build]
