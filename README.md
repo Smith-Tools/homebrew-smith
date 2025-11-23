@@ -13,6 +13,9 @@ brew tap Smith-Tools/smith
 
 ### **Install Individual Tools**
 ```bash
+# Multi-Skill Specialist System (Framework expertise)
+brew install maxwell
+
 # Unified CLI interface
 brew install smith-cli
 
@@ -31,13 +34,14 @@ brew install smith-validation
 
 ### **Install All Tools**
 ```bash
-brew install smith-cli smith-spmsift smith-sbsift smith-xcsift smith-validation
+brew install maxwell smith-cli smith-spmsift smith-sbsift smith-xcsift smith-validation
 ```
 
 ## 📋 **Available Formulas**
 
 | Formula | Description | Tool |
 |---------|-------------|------|
+| **maxwell** | Multi-Skill Specialist System - Framework expertise coordination | [Maxwell](https://github.com/Smith-Tools/Maxwell) |
 | **smith-cli** | Unified CLI interface | [smith-cli](https://github.com/Smith-Tools/smith-cli) |
 | **smith-spmsift** | Swift Package Manager analysis | [smith-spmsift](https://github.com/Smith-Tools/smith-spmsift) |
 | **smith-sbsift** | Swift build analysis | [smith-sbsift](https://github.com/Smith-Tools/smith-sbsift) |
@@ -45,6 +49,21 @@ brew install smith-cli smith-spmsift smith-sbsift smith-xcsift smith-validation
 | **smith-validation** | Swift architectural validation engine | [smith-validation](https://github.com/Smith-Tools/smith-validation) |
 
 ## 💡 **Usage Examples**
+
+### **Maxwell - Framework Expertise**
+```bash
+# Search for framework patterns
+maxwell search "TCA @Shared" --domain Point-Free
+
+# List all patterns in a domain
+maxwell domain SharePlay
+
+# Find specific pattern
+maxwell pattern "TCA @Shared Single Owner"
+
+# In Claude Code - auto-triggers on framework keywords
+@maxwell  # Explicit invocation for complex multi-domain questions
+```
 
 ### **Smith CLI**
 ```bash
