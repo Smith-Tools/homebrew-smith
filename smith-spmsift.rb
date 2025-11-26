@@ -12,12 +12,12 @@ class SmithSpmsift < Formula
   depends_on "swift"
 
   def install
-    system "swift", "build", "--disable-sandbox", "-c", "release", "--product spmsift"
-    bin.install ".build/arm64-apple-macosx/release/spmsift"
+    system "swift", "build", "--disable-sandbox", "-c", "release", "--product smith-spmsift"
+    bin.install ".build/arm64-apple-macosx/release/smith-spmsift"
   end
 
   test do
-    output = shell_output("#{bin}/spmsift --help")
-    assert_match "spmsift", output
+    output = shell_output("#{bin}/smith-spmsift --help")
+    assert_match "smith-spmsift", output
   end
 end
