@@ -4,7 +4,7 @@ class SmithXcsift < Formula
   desc "Xcode build analysis for Smith Tools"
   homepage "https://github.com/Smith-Tools/smith-xcsift"
   url "https://github.com/Smith-Tools/smith-xcsift/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "sha256_placeholder"
+  sha256 "c0e2959eea566a92819169fe070b6ed5421f39b0d00b63c4626af0ef8ab166e6"
   license "MIT"
 
   depends_on :macos
@@ -12,8 +12,8 @@ class SmithXcsift < Formula
   depends_on "swift"
 
   def install
-    system "swift", "build", "--disable-sandbox", "-c", "release", "--product SmithXCSift"
-    bin.install ".build/release/SmithXCSift" => "smith-xcsift"
+    system "swift", "build", "--disable-sandbox", "-c", "release", "--product smith-xcsift"
+    bin.install ".build/arm64-apple-macosx/release/smith-xcsift"
   end
 
   test do

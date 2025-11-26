@@ -4,7 +4,7 @@ class SmithSpmsift < Formula
   desc "Swift Package Manager analysis for Smith Tools"
   homepage "https://github.com/Smith-Tools/smith-spmsift"
   url "https://github.com/Smith-Tools/smith-spmsift/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "sha256_placeholder"
+  sha256 "bdbc27f65341619a57c718821b011d634b1c2b32321835972f3faafdb546bf6b"
   license "MIT"
 
   depends_on :macos
@@ -12,12 +12,12 @@ class SmithSpmsift < Formula
   depends_on "swift"
 
   def install
-    system "swift", "build", "--disable-sandbox", "-c", "release", "--product SmithSPMSift"
-    bin.install ".build/release/SmithSPMSift" => "smith-spmsift"
+    system "swift", "build", "--disable-sandbox", "-c", "release", "--product spmsift"
+    bin.install ".build/arm64-apple-macosx/release/spmsift"
   end
 
   test do
-    output = shell_output("#{bin}/smith-spmsift --help")
-    assert_match "smith-spmsift", output
+    output = shell_output("#{bin}/spmsift --help")
+    assert_match "spmsift", output
   end
 end

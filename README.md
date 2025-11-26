@@ -28,13 +28,16 @@ brew install smith-sbsift
 # Xcode build analysis
 brew install smith-xcsift
 
+# TCA performance profiling and multi-instrument enrichment
+brew install smith-tca-trace
+
 # TCA architectural validation
 brew install smith-validation
 ```
 
 ### **Install All Tools**
 ```bash
-brew install maxwell smith-cli smith-spmsift smith-sbsift smith-xcsift smith-validation
+brew install maxwell smith-cli smith-tca-trace smith-spmsift smith-sbsift smith-xcsift smith-validation
 ```
 
 ## 📋 **Available Formulas**
@@ -46,6 +49,7 @@ brew install maxwell smith-cli smith-spmsift smith-sbsift smith-xcsift smith-val
 | **smith-spmsift** | Swift Package Manager analysis | [smith-spmsift](https://github.com/Smith-Tools/smith-spmsift) |
 | **smith-sbsift** | Swift build analysis | [smith-sbsift](https://github.com/Smith-Tools/smith-sbsift) |
 | **smith-xcsift** | Xcode build analysis | [smith-xcsift](https://github.com/Smith-Tools/smith-xcsift) |
+| **smith-tca-trace** | TCA performance profiling and multi-instrument enrichment | [smith-tca-trace](https://github.com/Smith-Tools/smith-tca-trace) |
 | **smith-validation** | Swift architectural validation engine | [smith-validation](https://github.com/Smith-Tools/smith-validation) |
 
 ## 💡 **Usage Examples**
@@ -83,6 +87,21 @@ xcodebuild build -scheme MyApp 2>&1 | smith-xcsift analyze
 swift package dump-package | smith-spmsift analyze
 ```
 
+### **smith-tca-trace - TCA Performance Analysis**
+```bash
+# Analyze Instruments trace for TCA performance
+smith-tca-trace analyze MyApp.trace
+
+# Generate interactive dashboard with multi-instrument enrichment
+smith-tca-trace visualize MyApp.trace --output report.html
+
+# Compare performance before/after optimization
+smith-tca-trace compare baseline.trace optimized.trace
+
+# Compact analysis for AI agents
+smith-tca-trace analyze MyApp.trace --format compact
+```
+
 ### **Architectural Validation**
 ```bash
 # Validate Swift architecture
@@ -101,6 +120,7 @@ brew bump-formula-pr --url=NEW_URL smith-spmsift
 ### **Test Formulas**
 ```bash
 brew test smith-cli
+brew test smith-tca-trace
 brew test smith-spmsift
 brew test smith-sbsift
 brew test smith-xcsift
