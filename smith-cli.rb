@@ -14,12 +14,12 @@ class SmithCli < Formula
   def install
     # Build smith-cli
     system "swift", "build", "--disable-sandbox", "-c", "release"
-    bin.install ".build/release/smith-cli" => "smith-cli"
+    bin.install ".build/release/smith" => "smith"
   end
 
   test do
-    output = shell_output("#{bin}/smith-cli --help")
-    assert_match "smith-cli", output
-    assert_match "Smith Tools", output
+    output = shell_output("#{bin}/smith --help")
+    assert_match "Unified", output
+    assert_match "smith", output
   end
 end
